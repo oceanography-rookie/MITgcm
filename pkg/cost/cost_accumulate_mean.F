@@ -28,7 +28,7 @@ C     == Local variables
 C--   Calculate cost function on tile of this instance
       DO bj = myByLo(myThid), myByHi(myThid)
         DO bi = myBxLo(myThid), myBxHi(myThid)
-          DO k = 1, Nr
+C     ==  DO k = 1, Nr coment out ==
             DO j=1,sNy
               DO i=1,sNx
                 cMeanTheta(i,j,k,bi,bj) = cMeanTheta(i,j,k,bi,bj)
@@ -55,7 +55,7 @@ C--   Calculate cost function on tile of this instance
      &                 /lastinterval*deltaTClock
               ENDDO
             ENDDO
-          ENDDO
+C   ==    ENDDO ==
         ENDDO
       ENDDO
 
