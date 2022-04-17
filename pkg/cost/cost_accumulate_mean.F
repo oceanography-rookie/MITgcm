@@ -24,11 +24,12 @@ C     myThid - Thread number for this instance of the routine.
 #ifdef ALLOW_COST
 C     == Local variables
       INTEGER i, j, k
-
+      
 C--   Calculate cost function on tile of this instance
+      k=1
       DO bj = myByLo(myThid), myByHi(myThid)
         DO bi = myBxLo(myThid), myBxHi(myThid)
-C     ==  DO k = 1, Nr coment out ==
+C=========DO k = 1, Nr 
             DO j=1,sNy
               DO i=1,sNx
                 cMeanTheta(i,j,k,bi,bj) = cMeanTheta(i,j,k,bi,bj)
